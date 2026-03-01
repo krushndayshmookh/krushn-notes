@@ -3,6 +3,7 @@ backend/.env
 web/.env
 web/.env.local
 apple/krushn-notes/Config.xcconfig
+.env
 
 # Dependencies
 node_modules/

@@ -2,8 +2,7 @@
 
 A personal notes + todo app with real-time sync across Apple devices and web.
 
-- **Backend** — Express.js API deployed to Vercel
-- **Web** — Quasar (Vue 3) SPA deployed to Vercel
+- **Backend + Web** — Express.js API + Quasar (Vue 3) SPA, served from a single Vercel deployment
 - **Apple** — SwiftUI app for iOS, iPadOS, and macOS
 
 ---
@@ -24,14 +23,15 @@ A personal notes + todo app with real-time sync across Apple devices and web.
 1. Go to **GitHub → Settings → Developer settings → OAuth Apps → New OAuth App**
 2. Fill in:
    - **Application name:** krushn-notes (or anything)
-   - **Homepage URL:** `https://your-backend.vercel.app` (use `http://localhost:3000` for local dev)
-   - **Authorization callback URL:** `https://your-backend.vercel.app/auth/github/callback`
-     - For local dev: `http://localhost:3000/auth/github/callback`
+   - **Homepage URL:** `https://your-app.vercel.app` (use `http://localhost:3000` for local dev)
+   - **Authorization callback URL:** `https://your-app.vercel.app/api/auth/github/callback`
+     - For local dev: `http://localhost:3000/api/auth/github/callback`
 3. Click **Register application**
 4. Note your **Client ID**
 5. Click **Generate a new client secret** — note it immediately (shown once)
 
 You'll need:
+
 - `GITHUB_CLIENT_ID`
 - `GITHUB_CLIENT_SECRET`
 
@@ -48,6 +48,7 @@ You'll need:
    - Add a database name: `mongodb+srv://user:pass@cluster0.xxxxx.mongodb.net/krushn-notes?retryWrites=true&w=majority`
 
 You'll need:
+
 - `MONGODB_URI`
 
 ---
@@ -68,6 +69,7 @@ You'll need:
 4. Under **App Settings** → enable **Private channels** (this is free)
 
 You'll need:
+
 - `PUSHER_APP_ID`
 - `PUSHER_KEY`
 - `PUSHER_SECRET`
@@ -84,6 +86,7 @@ openssl rand -base64 48
 ```
 
 You'll need:
+
 - `JWT_SECRET`
 
 ---
@@ -201,6 +204,7 @@ Set `VITE_API_URL`, `VITE_PUSHER_KEY`, `VITE_PUSHER_CLUSTER` in the web project'
 ## 8. iOS / macOS App
 
 See `apple/README.md` for Xcode setup instructions, including:
+
 - Adding PusherSwift via Swift Package Manager
 - Setting up the App Group for widget data sharing
 - Configuring URL scheme (`krushnnotes://`) for OAuth callback
