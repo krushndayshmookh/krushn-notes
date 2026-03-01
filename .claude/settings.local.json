@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tail:*)",
+      "Bash(head:*)",
+      "Bash(npx quasar:*)",
+      "Bash(cat:*)",
+      "Bash(npm info:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

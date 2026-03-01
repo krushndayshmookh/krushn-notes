@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F001 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = S001 /* Models.swift */; };
+		F002 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = S002 /* Keychain.swift */; };
+		F003 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = S003 /* APIClient.swift */; };
+		F004 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = S004 /* SyncManager.swift */; };
+		F005 /* PusherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = S005 /* PusherManager.swift */; };
+		F006 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = S006 /* MarkdownRenderer.swift */; };
+		F007 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = S007 /* AuthManager.swift */; };
+		F008 /* WidgetSharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = S008 /* WidgetSharedModels.swift */; };
+		F011 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = S001 /* Models.swift */; };
+		F012 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = S002 /* Keychain.swift */; };
+		F013 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = S003 /* APIClient.swift */; };
+		F014 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = S004 /* SyncManager.swift */; };
+		F015 /* PusherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = S005 /* PusherManager.swift */; };
+		F016 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = S006 /* MarkdownRenderer.swift */; };
+		F017 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = S007 /* AuthManager.swift */; };
+		F018 /* WidgetSharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = S008 /* WidgetSharedModels.swift */; };
+		F021 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = S002 /* Keychain.swift */; };
+		F022 /* WidgetSharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = S008 /* WidgetSharedModels.swift */; };
+		I001 /* krushnNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S001 /* krushnNotesApp.swift */; };
+		I002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S002 /* RootView.swift */; };
+		I003 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S003 /* LoginView.swift */; };
+		I004 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S004 /* ContentView.swift */; };
+		I005 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S005 /* SettingsView.swift */; };
+		I006 /* NotesTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S006 /* NotesTab.swift */; };
+		I007 /* NotesSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S007 /* NotesSidebar.swift */; };
+		I008 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S008 /* NoteListView.swift */; };
+		I009 /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S009 /* NoteDetailView.swift */; };
+		I010 /* TasksTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S010 /* TasksTab.swift */; };
+		I011 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I_S011 /* TaskListView.swift */; };
+		M001 /* krushnNotesApp_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S001 /* krushnNotesApp_macOS.swift */; };
+		M002 /* MacRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S002 /* MacRootView.swift */; };
+		M003 /* MacLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S003 /* MacLoginView.swift */; };
+		M004 /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S004 /* MacContentView.swift */; };
+		M005 /* MacSidebarColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S005 /* MacSidebarColumn.swift */; };
+		M006 /* MacNoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S006 /* MacNoteListView.swift */; };
+		M007 /* MacNoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S007 /* MacNoteDetailView.swift */; };
+		M008 /* MacTaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S008 /* MacTaskListView.swift */; };
+		M009 /* MacSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S009 /* MacSettingsView.swift */; };
+		M010 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S010 /* FloatingPanel.swift */; };
+		M011 /* FloatingPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M_S011 /* FloatingPanelView.swift */; };
+		W001 /* TaskWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = W_S001 /* TaskWidget.swift */; };
+		W002 /* ToggleTaskIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = W_S002 /* ToggleTaskIntent.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B3998052F544EAB005FA4D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PROJECT /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = TARGET_WIDGET;
+			remoteInfo = krushnNotesWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B3998062F544ED6005FA4D2 /* krushn-notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "krushn-notes.entitlements"; sourceTree = "<group>"; };
+		1B3998072F5450E4005FA4D2 /* krushnNotesWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = krushnNotesWidget.entitlements; sourceTree = "<group>"; };
+		I_S001 /* krushnNotesApp.swift */      = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = krushnNotesApp.swift;      sourceTree = "<group>"; };
+		I_S002 /* RootView.swift */            = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift;            sourceTree = "<group>"; };
+		I_S003 /* LoginView.swift */           = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift;           sourceTree = "<group>"; };
+		I_S004 /* ContentView.swift */         = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift;         sourceTree = "<group>"; };
+		I_S005 /* SettingsView.swift */        = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift;        sourceTree = "<group>"; };
+		I_S006 /* NotesTab.swift */            = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTab.swift;            sourceTree = "<group>"; };
+		I_S007 /* NotesSidebar.swift */        = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSidebar.swift;        sourceTree = "<group>"; };
+		I_S008 /* NoteListView.swift */        = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift;        sourceTree = "<group>"; };
+		I_S009 /* NoteDetailView.swift */      = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift;      sourceTree = "<group>"; };
+		I_S010 /* TasksTab.swift */            = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTab.swift;            sourceTree = "<group>"; };
+		I_S011 /* TaskListView.swift */        = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift;        sourceTree = "<group>"; };
+		M_S001 /* krushnNotesApp_macOS.swift */= {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = krushnNotesApp_macOS.swift; sourceTree = "<group>"; };
+		M_S002 /* MacRootView.swift */         = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacRootView.swift;         sourceTree = "<group>"; };
+		M_S003 /* MacLoginView.swift */        = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacLoginView.swift;        sourceTree = "<group>"; };
+		M_S004 /* MacContentView.swift */      = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift;      sourceTree = "<group>"; };
+		M_S005 /* MacSidebarColumn.swift */    = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSidebarColumn.swift;    sourceTree = "<group>"; };
+		M_S006 /* MacNoteListView.swift */     = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacNoteListView.swift;     sourceTree = "<group>"; };
+		M_S007 /* MacNoteDetailView.swift */   = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacNoteDetailView.swift;   sourceTree = "<group>"; };
+		M_S008 /* MacTaskListView.swift */     = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTaskListView.swift;     sourceTree = "<group>"; };
+		M_S009 /* MacSettingsView.swift */     = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSettingsView.swift;     sourceTree = "<group>"; };
+		M_S010 /* FloatingPanel.swift */       = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift;       sourceTree = "<group>"; };
+		M_S011 /* FloatingPanelView.swift */   = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelView.swift;   sourceTree = "<group>"; };
+		P001 /* Info.plist */                  = {isa = PBXFileReference; lastKnownFileType = text.plist.xml;   path = Info.plist;                sourceTree = "<group>"; };
+		P002 /* Widget-Info.plist */           = {isa = PBXFileReference; lastKnownFileType = text.plist.xml;   path = "Widget-Info.plist";       sourceTree = "<group>"; };
+		PROD_IOS    /* krushn-notes.app */         = {isa = PBXFileReference; explicitFileType = wrapper.application;          includeInIndex = 0; path = "krushn-notes.app";        sourceTree = BUILT_PRODUCTS_DIR; };
+		PROD_MACOS  /* krushn-notes macOS.app */   = {isa = PBXFileReference; explicitFileType = wrapper.application;          includeInIndex = 0; path = "krushn-notes macOS.app";   sourceTree = BUILT_PRODUCTS_DIR; };
+		PROD_WIDGET /* krushnNotesWidget.appex */  = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension";      includeInIndex = 0; path = krushnNotesWidget.appex;    sourceTree = BUILT_PRODUCTS_DIR; };
+		S001 /* Models.swift */             = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift;             sourceTree = "<group>"; };
+		S002 /* Keychain.swift */           = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift;           sourceTree = "<group>"; };
+		S003 /* APIClient.swift */          = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift;          sourceTree = "<group>"; };
+		S004 /* SyncManager.swift */        = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift;        sourceTree = "<group>"; };
+		S005 /* PusherManager.swift */      = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PusherManager.swift;      sourceTree = "<group>"; };
+		S006 /* MarkdownRenderer.swift */   = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift;   sourceTree = "<group>"; };
+		S007 /* AuthManager.swift */        = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift;        sourceTree = "<group>"; };
+		S008 /* WidgetSharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSharedModels.swift; sourceTree = "<group>"; };
+		W_S001 /* TaskWidget.swift */       = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskWidget.swift;         sourceTree = "<group>"; };
+		W_S002 /* ToggleTaskIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTaskIntent.swift;   sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		GRP_FLOATING /* FloatingPanel */ = {
+			isa = PBXGroup;
+			children = (
+				M_S010 /* FloatingPanel.swift */,
+				M_S011 /* FloatingPanelView.swift */,
+			);
+			path = FloatingPanel;
+			sourceTree = "<group>";
+		};
+		GRP_IOS /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				I_S001 /* krushnNotesApp.swift */,
+				I_S002 /* RootView.swift */,
+				I_S003 /* LoginView.swift */,
+				I_S004 /* ContentView.swift */,
+				I_S005 /* SettingsView.swift */,
+				GRP_IOS_VIEWS /* Views */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		GRP_IOS_NOTES /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				I_S006 /* NotesTab.swift */,
+				I_S007 /* NotesSidebar.swift */,
+				I_S008 /* NoteListView.swift */,
+				I_S009 /* NoteDetailView.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		GRP_IOS_TASKS /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				I_S010 /* TasksTab.swift */,
+				I_S011 /* TaskListView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		GRP_IOS_VIEWS /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				GRP_IOS_NOTES /* Notes */,
+				GRP_IOS_TASKS /* Tasks */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GRP_MACOS /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				M_S001 /* krushnNotesApp_macOS.swift */,
+				M_S002 /* MacRootView.swift */,
+				M_S003 /* MacLoginView.swift */,
+				M_S004 /* MacContentView.swift */,
+				M_S005 /* MacSidebarColumn.swift */,
+				M_S009 /* MacSettingsView.swift */,
+				GRP_MACOS_VIEWS /* Views */,
+				GRP_FLOATING /* FloatingPanel */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		GRP_MACOS_NOTES /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				M_S006 /* MacNoteListView.swift */,
+				M_S007 /* MacNoteDetailView.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		GRP_MACOS_TASKS /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				M_S008 /* MacTaskListView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		GRP_MACOS_VIEWS /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				GRP_MACOS_NOTES /* Notes */,
+				GRP_MACOS_TASKS /* Tasks */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GRP_MAIN /* krushn-notes */ = {
+			isa = PBXGroup;
+			children = (
+				1B3998062F544ED6005FA4D2 /* krushn-notes.entitlements */,
+				P001 /* Info.plist */,
+				GRP_SHARED /* Shared */,
+				GRP_IOS /* iOS */,
+				GRP_MACOS /* macOS */,
+				GRP_WIDGET /* Widget */,
+			);
+			path = "krushn-notes";
+			sourceTree = "<group>";
+		};
+		GRP_PRODUCTS /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PROD_IOS /* krushn-notes.app */,
+				PROD_MACOS /* krushn-notes macOS.app */,
+				PROD_WIDGET /* krushnNotesWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		GRP_SHARED /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				S001 /* Models.swift */,
+				S002 /* Keychain.swift */,
+				S003 /* APIClient.swift */,
+				S004 /* SyncManager.swift */,
+				S005 /* PusherManager.swift */,
+				S006 /* MarkdownRenderer.swift */,
+				S007 /* AuthManager.swift */,
+				S008 /* WidgetSharedModels.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		GRP_WIDGET /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				W_S001 /* TaskWidget.swift */,
+				W_S002 /* ToggleTaskIntent.swift */,
+				P002 /* Widget-Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		ROOT_GRP = {
+			isa = PBXGroup;
+			children = (
+				1B3998072F5450E4005FA4D2 /* krushnNotesWidget.entitlements */,
+				GRP_MAIN /* krushn-notes */,
+				GRP_PRODUCTS /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TARGET_IOS /* krushn-notes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFGLIST_IOS /* Build configuration list for PBXNativeTarget "krushn-notes" */;
+			buildPhases = (
+				PHASE_SOURCES_IOS /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEP_WIDGET /* PBXTargetDependency */,
+			);
+			name = "krushn-notes";
+			productName = "krushn-notes";
+			productReference = PROD_IOS /* krushn-notes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		TARGET_MACOS /* krushn-notes macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFGLIST_MACOS /* Build configuration list for PBXNativeTarget "krushn-notes macOS" */;
+			buildPhases = (
+				PHASE_SOURCES_MACOS /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "krushn-notes macOS";
+			productName = "krushn-notes macOS";
+			productReference = PROD_MACOS /* krushn-notes macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		TARGET_WIDGET /* krushnNotesWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFGLIST_WIDGET /* Build configuration list for PBXNativeTarget "krushnNotesWidget" */;
+			buildPhases = (
+				PHASE_SOURCES_WIDGET /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = krushnNotesWidget;
+			productName = krushnNotesWidget;
+			productReference = PROD_WIDGET /* krushnNotesWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PROJECT /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					TARGET_IOS = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					TARGET_MACOS = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					TARGET_WIDGET = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = CFGLIST_PROJECT /* Build configuration list for PBXProject "krushn-notes" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ROOT_GRP;
+			productRefGroup = GRP_PRODUCTS /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TARGET_IOS /* krushn-notes */,
+				TARGET_MACOS /* krushn-notes macOS */,
+				TARGET_WIDGET /* krushnNotesWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		PHASE_SOURCES_IOS /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F001 /* Models.swift in Sources */,
+				F002 /* Keychain.swift in Sources */,
+				F003 /* APIClient.swift in Sources */,
+				F004 /* SyncManager.swift in Sources */,
+				F005 /* PusherManager.swift in Sources */,
+				F006 /* MarkdownRenderer.swift in Sources */,
+				F007 /* AuthManager.swift in Sources */,
+				F008 /* WidgetSharedModels.swift in Sources */,
+				I001 /* krushnNotesApp.swift in Sources */,
+				I002 /* RootView.swift in Sources */,
+				I003 /* LoginView.swift in Sources */,
+				I004 /* ContentView.swift in Sources */,
+				I005 /* SettingsView.swift in Sources */,
+				I006 /* NotesTab.swift in Sources */,
+				I007 /* NotesSidebar.swift in Sources */,
+				I008 /* NoteListView.swift in Sources */,
+				I009 /* NoteDetailView.swift in Sources */,
+				I010 /* TasksTab.swift in Sources */,
+				I011 /* TaskListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PHASE_SOURCES_MACOS /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F011 /* Models.swift in Sources */,
+				F012 /* Keychain.swift in Sources */,
+				F013 /* APIClient.swift in Sources */,
+				F014 /* SyncManager.swift in Sources */,
+				F015 /* PusherManager.swift in Sources */,
+				F016 /* MarkdownRenderer.swift in Sources */,
+				F017 /* AuthManager.swift in Sources */,
+				F018 /* WidgetSharedModels.swift in Sources */,
+				M001 /* krushnNotesApp_macOS.swift in Sources */,
+				M002 /* MacRootView.swift in Sources */,
+				M003 /* MacLoginView.swift in Sources */,
+				M004 /* MacContentView.swift in Sources */,
+				M005 /* MacSidebarColumn.swift in Sources */,
+				M006 /* MacNoteListView.swift in Sources */,
+				M007 /* MacNoteDetailView.swift in Sources */,
+				M008 /* MacTaskListView.swift in Sources */,
+				M009 /* MacSettingsView.swift in Sources */,
+				M010 /* FloatingPanel.swift in Sources */,
+				M011 /* FloatingPanelView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PHASE_SOURCES_WIDGET /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F021 /* Keychain.swift in Sources */,
+				F022 /* WidgetSharedModels.swift in Sources */,
+				W001 /* TaskWidget.swift in Sources */,
+				W002 /* ToggleTaskIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEP_WIDGET /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = TARGET_WIDGET /* krushnNotesWidget */;
+			targetProxy = 1B3998052F544EAB005FA4D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BCFG_IOS_DEBUG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "krushn-notes/krushn-notes.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W287F7W3N4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "krushn-notes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayshmookh.notes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCFG_IOS_RELEASE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "krushn-notes/krushn-notes.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W287F7W3N4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "krushn-notes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayshmookh.notes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BCFG_MACOS_DEBUG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "krushn-notes/macOS/krushn-notes-macOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W287F7W3N4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "krushn-notes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayshmookh.notes.mac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BCFG_MACOS_RELEASE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "krushn-notes/macOS/krushn-notes-macOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W287F7W3N4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "krushn-notes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayshmookh.notes.mac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BCFG_PROJ_DEBUG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCFG_PROJ_RELEASE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCFG_WIDGET_DEBUG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = krushnNotesWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W287F7W3N4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "krushn-notes/Widget/Widget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayshmookh.notes.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCFG_WIDGET_RELEASE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = krushnNotesWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W287F7W3N4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "krushn-notes/Widget/Widget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayshmookh.notes.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFGLIST_IOS /* Build configuration list for PBXNativeTarget "krushn-notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFG_IOS_DEBUG /* Debug */,
+				BCFG_IOS_RELEASE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFGLIST_MACOS /* Build configuration list for PBXNativeTarget "krushn-notes macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFG_MACOS_DEBUG /* Debug */,
+				BCFG_MACOS_RELEASE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFGLIST_PROJECT /* Build configuration list for PBXProject "krushn-notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFG_PROJ_DEBUG /* Debug */,
+				BCFG_PROJ_RELEASE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFGLIST_WIDGET /* Build configuration list for PBXNativeTarget "krushnNotesWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFG_WIDGET_DEBUG /* Debug */,
+				BCFG_WIDGET_RELEASE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PROJECT /* Project object */;
+}

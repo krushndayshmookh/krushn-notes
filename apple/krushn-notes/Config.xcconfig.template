@@ -1,0 +1,6 @@
+// Copy this file to Config.xcconfig (do not commit Config.xcconfig)
+// Set these values before building.
+
+API_BASE_URL = https://your-backend.vercel.app
+PUSHER_KEY = your_pusher_key
+PUSHER_CLUSTER = us2
