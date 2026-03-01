@@ -108,10 +108,6 @@ GITHUB_CLIENT_SECRET=your_github_client_secret
 # JWT
 JWT_SECRET=your_random_jwt_secret_here
 
-# URLs (update after deploying web)
-WEB_URL=http://localhost:5173
-API_URL=http://localhost:3000
-
 # Pusher
 PUSHER_APP_ID=your_pusher_app_id
 PUSHER_KEY=your_pusher_key
@@ -119,29 +115,24 @@ PUSHER_SECRET=your_pusher_secret
 PUSHER_CLUSTER=your_pusher_cluster
 ```
 
-After deploying to Vercel, update `WEB_URL` to your web app's Vercel URL and `API_URL` to your backend's Vercel URL.
-
 ### Web — `web/.env`
 
 Create `web/.env` (never commit this file):
 
 ```env
-# Backend API (update after deploying backend)
-VITE_API_URL=http://localhost:3000
-
 # Pusher (public key and cluster are safe to expose)
 VITE_PUSHER_KEY=your_pusher_key
 VITE_PUSHER_CLUSTER=your_pusher_cluster
 ```
 
-After deploying to Vercel, update `VITE_API_URL` to your backend's Vercel URL.
+No API URL needed — the frontend and backend share the same domain in production, so all `/api/...` requests are relative. In local dev the Quasar dev server proxies `/api` to `http://localhost:3000` automatically.
 
 ### Apple app — `apple/krushn-notes/Config.xcconfig`
 
 The iOS/macOS app reads config from `apple/krushn-notes/Config.xcconfig` (not committed):
 
 ```
-API_BASE_URL = https://your-backend.vercel.app
+API_BASE_URL = https://your-app.vercel.app
 PUSHER_KEY = your_pusher_key
 PUSHER_CLUSTER = your_pusher_cluster
 ```
@@ -165,39 +156,47 @@ npm run dev   # starts on http://localhost:3000
 ```bash
 cd web
 npm install
-npm run dev   # starts on http://localhost:5173 (or similar)
+npm run dev   # starts on http://localhost:9000
 ```
 
-Open `http://localhost:5173` in your browser. Log in with GitHub.
+Open `http://localhost:9000` in your browser. Log in with GitHub.
 
 ---
 
 ## 7. Deploying to Vercel
 
-### Backend
+The frontend and backend deploy together as a **single Vercel project** from the monorepo root. Vercel builds the Quasar SPA and the Express API in one pass, then serves static assets from the CDN and routes `/api/*` to the serverless function.
 
-```bash
-cd backend
-vercel
-# Follow prompts: link to project, set environment variables
-```
+### Steps
 
-Set all variables from `backend/.env` in **Vercel → Project → Settings → Environment Variables**.
+1. **Create a new Vercel project** linked to this repository. Set the **Root Directory** to `.` (the repo root).
 
-Also update your **GitHub OAuth App**'s callback URL to:
-`https://your-backend.vercel.app/auth/github/callback`
+2. **Set environment variables** in **Vercel → Project → Settings → Environment Variables**:
 
-### Web
+   | Variable | Where used |
+   |---|---|
+   | `MONGODB_URI` | Backend |
+   | `GITHUB_CLIENT_ID` | Backend |
+   | `GITHUB_CLIENT_SECRET` | Backend |
+   | `JWT_SECRET` | Backend |
+   | `PUSHER_APP_ID` | Backend |
+   | `PUSHER_KEY` | Backend + Web (build-time) |
+   | `PUSHER_SECRET` | Backend |
+   | `PUSHER_CLUSTER` | Backend + Web (build-time) |
+   | `VITE_PUSHER_KEY` | Web build |
+   | `VITE_PUSHER_CLUSTER` | Web build |
 
-```bash
-cd web
-quasar build     # outputs to web/dist/spa
-vercel dist/spa  # deploy the built output
-```
+3. **Deploy:**
 
-Or configure Vercel to run `quasar build` as the build command with `dist/spa` as the output directory.
+   ```bash
+   vercel
+   # or push to main — Vercel auto-deploys on push
+   ```
 
-Set `VITE_API_URL`, `VITE_PUSHER_KEY`, `VITE_PUSHER_CLUSTER` in the web project's Vercel environment variables.
+4. **Update your GitHub OAuth App**'s callback URL to:
+   `https://your-app.vercel.app/api/auth/github/callback`
+
+Vercel will run `quasar build` in the `web/` directory (output: `web/dist/spa`) and deploy `backend/api/index.js` as a serverless function. The root `vercel.json` handles all routing.
 
 ---
 
@@ -216,6 +215,7 @@ See `apple/README.md` for Xcode setup instructions, including:
 
 ```
 krushn-notes/
+├── vercel.json               # Unified Vercel config (root — use this for deployment)
 ├── backend/
 │   ├── api/
 │   │   └── index.js          # Vercel entry + Express app
@@ -224,7 +224,6 @@ krushn-notes/
 │   │   ├── routes/           # Express routers (auth, folders, notes, tasks, sync)
 │   │   ├── middleware/        # JWT auth middleware
 │   │   └── lib/              # Pusher helper
-│   ├── vercel.json
 │   └── package.json
 ├── web/
 │   ├── src/
@@ -235,7 +234,6 @@ krushn-notes/
 │   │   ├── stores/           # Pinia stores (auth, notes, tasks)
 │   │   └── router/           # Vue Router routes
 │   ├── quasar.config.js
-│   ├── vercel.json
 │   └── package.json
 └── apple/
     ├── krushn-notes.xcodeproj
