@@ -1,0 +1,32 @@
+# Environment files — never commit
+backend/.env
+web/.env
+web/.env.local
+apple/krushn-notes/Config.xcconfig
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+web/dist/
+backend/dist/
+.vercel/
+
+# Xcode
+apple/build/
+apple/*.xcodeproj/xcuserdata/
+apple/*.xcworkspace/xcuserdata/
+apple/**/*.xcuserstate
+apple/DerivedData/
+*.swp
+*.lock
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
